@@ -23,6 +23,7 @@
     - name: install packages
       apt:
         name: "{{item}}"
+        state: present
       loop:
         - apache2
         - mariadb105-server
@@ -30,7 +31,7 @@
         - chrony
         - elinks 
         - ansible
-        state: present
+        
 
     # - name: Task 2 (conditional with multiple conditions)
     #   debug:

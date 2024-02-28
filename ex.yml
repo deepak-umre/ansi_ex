@@ -4,14 +4,18 @@
   remote_user: ubuntu
   become: true
   tasks:
-    # - name: Task 1 (conditional)
-    #   apt: 
-    #     name: apache2
-    #     state: present
-    #   when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
-    # - name:
-    #   debug:
-    #     msg: "{{ansible_kernel_version}}"
+    - name: Task 1 (conditional)
+      tags:
+        - apache2
+      apt: 
+        name: apache2
+        state: present
+      when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
+    - name:
+      tags:
+        - distributer 
+      debug:
+        msg: "{{ansible_kernel_version}}"
     # - name: Example Playbook with Loop
     #   debug:
     #     msg: "{{ item }}"

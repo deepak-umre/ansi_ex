@@ -30,7 +30,7 @@
         - chrony
         - elinks 
         - ansible
-      state: present
+        state: present
 
     # - name: Task 2 (conditional with multiple conditions)
     #   debug:

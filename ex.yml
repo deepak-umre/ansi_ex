@@ -3,11 +3,13 @@
   tasks:
     - name: Task 1 (conditional)
       command: apt install openjdk-11-jre -y
-      when: ansible_os_family == "Debian"
+      when: ansible_os_family == "Debian" or 
+    - name: print
+      debug: "this is not Debian"
 
-    - name: Task 2 (conditional with multiple conditions)
-      debug:
-        msg: "Task 2 executed"
-      when:
-        - ansible_distribution == "Ubuntu"
-        - ansible_distribution_major_version|int >= 20
+    # - name: Task 2 (conditional with multiple conditions)
+    #   debug:
+    #     msg: "Task 2 executed"
+    #   when:
+    #     - ansible_distribution == "Ubuntu"
+    #     - ansible_distribution_major_version|int >= 20

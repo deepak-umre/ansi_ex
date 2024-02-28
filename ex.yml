@@ -14,10 +14,10 @@
     - name: Example Playbook with Loop
       debug:
         msg: "{{ item }}"
-        loop:
-          - Apple
-          - Banana
-          - Orange
+      loop:
+        - Apple
+        - Banana
+        - Orange
 
 
 

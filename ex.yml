@@ -10,7 +10,7 @@
       when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
     - name:
       debug:
-        msg:"{{ansible_kernel_version}}"
+        msg: "{{ansible_kernel_version}}"
 
     # - name: Task 2 (conditional with multiple conditions)
     #   debug:

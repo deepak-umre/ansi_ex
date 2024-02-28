@@ -4,14 +4,14 @@
   remote_user: ubuntu
   become: true
   tasks:
-    - name: Task 1 (conditional)
-      apt: 
-        name: apache2
-        state: present
-      when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
-    - name:
-      debug:
-        msg: "{{ansible_kernel_version}}"
+    # - name: Task 1 (conditional)
+    #   apt: 
+    #     name: apache2
+    #     state: present
+    #   when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
+    # - name:
+    #   debug:
+    #     msg: "{{ansible_kernel_version}}"
     # - name: Example Playbook with Loop
     #   debug:
     #     msg: "{{ item }}"
@@ -20,17 +20,17 @@
     #     - Banana
     #     - Orange
 
-    - name: install packages
-      apt:
-        name: "{{item}}"
-        state: present
-      loop:
-        - apache2
-        - mariadb105-server
-        - tree
-        - chrony
-        - elinks 
-        - ansible
+    # - name: install packages
+    #   apt:
+    #     name: "{{item}}"
+    #     state: present
+    #   loop:
+    #     - apache2
+    #     - mariadb105-server
+    #     - tree
+    #     - chrony
+    #     - elinks 
+    #     - ansible
     - name: set facts
       set_facts:
         my_os = "ubuntu"

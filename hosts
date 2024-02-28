@@ -1,0 +1,5 @@
+[servers]
+ansible ansible_host=15.229.5.99
+
+[servers:vars]
+ansible_ssh_private_key_file=./ansible.pem

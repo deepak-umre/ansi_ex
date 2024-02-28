@@ -5,7 +5,7 @@
   tasks:
     - name: Task 1 (conditional)
       apt: 
-        name: appache2
+        name: apache2
         state: present
       when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
     - name:

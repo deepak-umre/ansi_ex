@@ -18,9 +18,10 @@
         - Apple
         - Banana
         - Orange
+
     - name: install packages
       apt:
-        name:"{{item}}"
+        name: "{{item}}"
       state: present
       loop:
         - apache2

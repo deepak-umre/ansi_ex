@@ -4,7 +4,9 @@
   become: true
   tasks:
     - name: Task 1 (conditional)
-      command: apt install openjdk-11-jre -y
+      apt: 
+        name: openjdk-11-jre -y
+        state: prsent
       when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
 
 

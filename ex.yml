@@ -1,5 +1,6 @@
 - name: Example Playbook with Conditions
   hosts: all
+  remote_user: ubuntu
   become: true
   tasks:
     - name: Task 1 (conditional)

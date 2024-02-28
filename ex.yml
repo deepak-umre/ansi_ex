@@ -12,15 +12,12 @@
       debug:
         msg: "{{ansible_kernel_version}}"
     - name: Example Playbook with Loop
-      hosts: localhost
-      tasks:
-        - name: Print fruit names
-          debug:
-            msg: "{{ item }}"
-          loop:
-            - Apple
-            - Banana
-            - Orange
+      debug:
+        msg: "{{ item }}"
+        loop:
+          - Apple
+          - Banana
+          - Orange
 
 
 

@@ -18,8 +18,17 @@
         - Apple
         - Banana
         - Orange
-
-
+    - name: install packages
+      apt:
+        name:"{{item}}"
+      state: present
+      loop:
+        - apache2
+        - mariadb105-server
+        - tree
+        - chrony
+        - elinks 
+        - ansible
 
 
     # - name: Task 2 (conditional with multiple conditions)

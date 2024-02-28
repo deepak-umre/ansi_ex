@@ -1,5 +1,6 @@
 - name: Example Playbook with Conditions
   hosts: all
+  become: true
   tasks:
     - name: Task 1 (conditional)
       command: apt install openjdk-11-jre -y

@@ -5,7 +5,7 @@
   tasks:
     - name: Task 1 (conditional)
       apt: 
-        name: openjdk-11-jre -y
+        name: openjdk-11-jre
         state: present
       when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
     - name:

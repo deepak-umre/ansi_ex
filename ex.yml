@@ -31,7 +31,12 @@
         - chrony
         - elinks 
         - ansible
-        
+    - name: set facts
+      set_facts:
+        my_os = "ubuntu"
+    - name: print OS
+      debug:
+        msg: "{{my_os}}"
 
     # - name: Task 2 (conditional with multiple conditions)
     #   debug:

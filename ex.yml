@@ -1,3 +1,4 @@
+---
 - name: Example Playbook with Conditions
   hosts: all
   remote_user: ubuntu
@@ -11,13 +12,13 @@
     - name:
       debug:
         msg: "{{ansible_kernel_version}}"
-    - name: Example Playbook with Loop
-      debug:
-        msg: "{{ item }}"
-      loop:
-        - Apple
-        - Banana
-        - Orange
+    # - name: Example Playbook with Loop
+    #   debug:
+    #     msg: "{{ item }}"
+    #   loop:
+    #     - Apple
+    #     - Banana
+    #     - Orange
 
     - name: install packages
       apt:
@@ -37,4 +38,3 @@
     #   when:
     #     - ansible_distribution == "Ubuntu"
     #     - ansible_distribution_major_version|int >= 20
-
